@@ -1,6 +1,10 @@
+import DeleteIcon from "@mui/icons-material/Delete";
 import "../App.css";
+import { deleteMessage } from "../Redux-toolkit/reducers";
+import { useDispatch } from "react-redux";
 
 function Message({ user, message, curr }) {
+  const dispatch = useDispatch();
   return (
     <div className={` flex py-4 ${curr === "true" ? "w-fit" : "w-full"} `}>
       <strong
@@ -21,6 +25,14 @@ function Message({ user, message, curr }) {
       >
         {message}
       </div>
+      {curr === "true" && (
+        <div
+          onClick={() => dispatch(deleteMessage({ message }))}
+          className="ml-2 self-end"
+        >
+          <DeleteIcon className="text-red-600 cursor-pointer" />
+        </div>
+      )}
     </div>
   );
 }

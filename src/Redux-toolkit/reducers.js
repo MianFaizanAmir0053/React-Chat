@@ -28,9 +28,14 @@ const chatSlice = createSlice({
             const {username} = action.payload;
             state.users = state.users.filter(user => user.username !== username);
         },
+        deleteMessage: (state, action) => {
+            const {message} = action.payload;
+            state.messages = state.messages.filter(m => m.message !== message);
+            localStorage.setItem("messages", JSON.stringify(state.messages))
+        },
     },
 });
 
-export const {addUser, addMessage, removeUser, updateMessages} = chatSlice.actions;
+export const {addUser, addMessage, removeUser, updateMessages, deleteMessage} = chatSlice.actions;
 
 export default chatSlice.reducer;

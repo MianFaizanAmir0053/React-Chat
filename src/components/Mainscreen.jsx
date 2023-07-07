@@ -20,6 +20,7 @@ function Mainscreen({}) {
       const m = JSON.parse(msgs);
       m !== null && dispatch(updateMessages(m));
       m === null ? setNoMsg(true) : setNoMsg(false);
+      m.length === 0 && setNoMsg(true);
     };
     // fetchMessages();
     const intervalId = setInterval(fetchMessages, 2000); // Call fetchMessages every 2 seconds
@@ -38,7 +39,7 @@ function Mainscreen({}) {
 
   return (
     <div
-      className={` relative pb-16 w-[100%] min-h-screen bg bg-cover max-w-2xl mx-auto`}
+      className={`relative pb-16 w-[100%] min-h-screen bg bg-cover max-w-2xl mx-auto`}
     >
       {messages.length !== 0 ? (
         messages.map((msg, i) => (

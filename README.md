@@ -6,6 +6,7 @@ This is a simple chat application built using React.js, Vite, Tailwind CSS, and 
 
 - Real-time messaging: Users can send and receive messages in real-time.
 - Local storage synchronization: Messages are stored in the browser's localStorage, and the storage is synchronized every 2 seconds to ensure consistency across multiple tabs.
+- Deleting messages: Users can delete their own messages from the chat history.
 - Responsive design: The chat application is designed to be responsive and work well on different screen sizes.
 - User-friendly interface: The interface is intuitive and user-friendly, making it easy for users to send and receive messages.
 

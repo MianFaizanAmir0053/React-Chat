@@ -17,7 +17,16 @@ const chatSlice = createSlice({
         },
         addMessage: (state, action) => {
             const {username, message} = action.payload;
-            const formattedMessage = {username, message};
+            const timestamp = new Date().getTime(); // Current timestamp
+            const date = new Date(timestamp);
+            const dateFormat = date.getDate() +
+                "/" + (date.getMonth() + 1) +
+                "/" + date.getFullYear() +
+                " " + date.getHours() +
+                ":" + date.getMinutes() +
+                ":" + date.getSeconds()
+
+            const formattedMessage = {username, message, date: dateFormat, id: timestamp};
             state.messages.push(formattedMessage);
             localStorage.setItem("messages", JSON.stringify(state.messages))
         },

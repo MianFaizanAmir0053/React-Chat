@@ -47,6 +47,7 @@ function Mainscreen({}) {
             user={msg?.username}
             curr={currentUser?.username === msg?.username ? "true" : "false"}
             message={msg?.message}
+            date={msg?.date}
             key={i}
           />
         ))

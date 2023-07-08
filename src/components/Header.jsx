@@ -5,7 +5,15 @@ function Header({ username }) {
         <div className="uppercase text-orange-500  text-3xl font-thin tracking-[0.4rem]">
           React Chat
         </div>
-        {username && <div className=" text-green-700">Hello {username}</div>}
+        {username && (
+          <div className=" text-slate-800">
+            Welcome
+            <span className=" text-blue-500 uppercase font-semibold tracking-wider">
+              {" "}
+              {username}
+            </span>
+          </div>
+        )}
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import "../App.css";
 import { deleteMessage } from "../Redux-toolkit/reducers";
 import { useDispatch } from "react-redux";
 
-function Message({ user, message, curr }) {
+function Message({ user, message, curr, date }) {
   const dispatch = useDispatch();
   return (
     <div className={` flex py-4 ${curr === "true" ? "w-fit" : "w-full"} `}>
@@ -24,6 +24,9 @@ function Message({ user, message, curr }) {
         }   rounded-3xl shadow-lg`}
       >
         {message}
+      </div>
+      <div className="ml-2 self-end ">
+        <p className="text-xs text-gray-400">{date}</p>
       </div>
       {curr === "true" && (
         <div

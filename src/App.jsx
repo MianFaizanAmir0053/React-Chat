@@ -19,7 +19,7 @@ function App() {
     <div className="bg2 w-screen h-screen">
       <Header />
       <div className="w-fit px-8 text-white rounded shadow-md m-auto absolute left-[calc(50%-9rem)] top-[calc(50%-12rem)] py-4">
-        <h1 className="text-3xl font-semibold">Login</h1>
+        <h1 className="text-3xl font-semibold text-teal-500">Login</h1>
         <div className="py-4">
           <input
             className="px-4 bg-teal-50 text-teal-800 outline-none rounded py-4"

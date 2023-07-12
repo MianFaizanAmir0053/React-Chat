@@ -2,6 +2,9 @@
 
 This is a simple chat application built using React.js, Vite, Tailwind CSS, and Redux Toolkit. The application allows users to send and receive messages in real-time. The messages are stored locally using the browser's localStorage API, and the local storage is updated every 2 seconds to ensure that different users opened on different tabs can have the same set of messages.
 
+## View Live
+https://master--react-chat-0053.netlify.app/
+
 ## Features
 
 - Real-time messaging: Users can send and receive messages in real-time.
